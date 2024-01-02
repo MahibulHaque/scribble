@@ -1,0 +1,35 @@
+:host {
+    display: block;
+  }
+  
+  $progressBarHeight: 5px;
+  
+  .progress-bar-container {
+    width: 100vw;
+    height: calc(100vh - #{$progressBarHeight});
+    position: fixed !important;
+    top: $progressBarHeight !important;
+    left: 0 !important;
+    z-index: 100000 !important;
+    opacity: 0.1;
+    background-color: black;
+  }
+  
+  app-progress-bar {
+    mat-progress-bar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      z-index: 1000000 !important;
+      //height: $progressBarHeight !important;
+  
+      .mdc-linear-progress__bar {
+        height: $progressBarHeight !important;
+      }
+  
+      .mdc-linear-progress__buffer {
+        height: $progressBarHeight !important;
+      }
+    }
+  }

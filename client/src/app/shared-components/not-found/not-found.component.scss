@@ -1,0 +1,33 @@
+:host {
+    #error-404 {
+      width: 100vw;
+      height: 100vh;
+      height: 100lvh;
+      overflow: hidden;
+      display: grid;
+      place-content: center;
+      .content {
+        max-width: 512px !important;
+  
+        .error-code {
+          font-size: 112px;
+          text-align: center;
+          line-height: 1;
+          margin-bottom: 16px;
+          font-weight: 500;
+        }
+  
+        .message {
+          font-size: 24px;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.54);
+        }
+        .back-link {
+          display: inline-block;
+          
+          color: #cc3c37;
+          text-align: center;
+        }
+      }
+    }
+  }

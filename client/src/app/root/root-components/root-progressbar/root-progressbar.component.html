@@ -1,0 +1,8 @@
+@if (progressBar | async; as Config) {
+    @if (Config.dataLoading) {
+      <mat-progress-bar mode="indeterminate" [@fade]></mat-progress-bar>
+    }
+    @if (Config.overlay) {
+      <div class="progress-bar-container" [@fade]></div>
+    }
+  }
