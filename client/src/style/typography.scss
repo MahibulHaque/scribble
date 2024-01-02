@@ -1,0 +1,369 @@
+@import "vars";
+
+$font-remote-path: "../assets/fonts/rutan-old";
+// New Styles from Moshiur vai
+// @font-face {
+//   font-family: "Rutan";
+//   src: url("#{$font-remote-path}/Rutan-Light.eot");
+//   src: url("#{$font-remote-path}/Rutan-Light.eot?#iefix") format("embedded-opentype"),
+//     url("#{$font-remote-path}/Rutan-Light.woff2") format("woff2"),
+//     url("#{$font-remote-path}/Rutan-Light.woff") format("woff"),
+//     url("#{$font-remote-path}/Rutan-Light.otf") format("opentype");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Rutan";
+//   src: url("#{$font-remote-path}/Rutan-Regular.eot");
+//   src: url("#{$font-remote-path}/Rutan-Regular.eot?#iefix") format("embedded-opentype"),
+//     url("#{$font-remote-path}/Rutan-Regular.woff2") format("woff2"),
+//     url("#{$font-remote-path}/Rutan-Regular.woff") format("woff"),
+//     url("#{$font-remote-path}/Rutan-Regular.otf") format("opentype");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Rutan";
+//   src: url("#{$font-remote-path}/Rutan-Medium.eot");
+//   src: url("#{$font-remote-path}/Rutan-Medium.eot?#iefix") format("embedded-opentype"),
+//     url("#{$font-remote-path}/Rutan-Medium.woff2") format("woff2"),
+//     url("#{$font-remote-path}/Rutan-Medium.woff") format("woff"),
+//     url("#{$font-remote-path}/Rutan-Medium.otf") format("opentype");
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Rutan";
+//   src: url("#{$font-remote-path}/Rutan-DemiBold.eot");
+//   src: url("#{$font-remote-path}/Rutan-DemiBold.eot?#iefix") format("embedded-opentype"),
+//     url("#{$font-remote-path}/Rutan-DemiBold.woff2") format("woff2"),
+//     url("#{$font-remote-path}/Rutan-DemiBold.woff") format("woff"),
+//     url("#{$font-remote-path}/Rutan-DemiBold.otf") format("opentype");
+//   font-weight: 600;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+$font-version: "6.1";
+
+@font-face {
+  font-family: $font-family;
+  font-weight: normal;
+  src: url("#{$font-remote-path}/Rutan-Regular.woff2?v=#{$font-version}") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-family;
+  font-weight: 300;
+  src: url("#{$font-remote-path}/Rutan-Light.woff2?v=#{$font-version}") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-family-bold;
+  font-weight: bold;
+  src: url("#{$font-remote-path}/Rutan-Medium.woff2?v=#{$font-version}") format("woff2");
+  font-display: swap;
+}
+
+.business-title,
+.business-subtitle {
+  width: 100%;
+  display: block;
+}
+
+.business-title {
+  font-style: normal;
+  font-size: 26px;
+  line-height: 120%;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.business-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+//-----------------------------------------
+// word-break
+//-----------------------------------------
+.dont-break-out {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  //noinspection CssUnknownProperty
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  //noinspection CssOverwrittenProperties
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  //noinspection CssOverwrittenProperties
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+body {
+  font-size: 13px;
+  font-family: $font-family, sans-serif;
+  color: #212121;
+  p {
+    line-height: 21px;
+  }
+  .rich-text-inside {
+    p {
+      line-height: normal;
+    }
+  }
+}
+
+html {
+  line-height: 1.4 !important;
+  letter-spacing: -0.1px !important;
+}
+
+html,
+body {
+  -moz-osx-font-smoothing: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 400;
+}
+
+.body2 {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  margin: 0;
+}
+
+.body1 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.0025em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+body.theme-ecap {
+  //color: $gray-500 !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .subtitle2 {
+    color: #212121;
+  }
+
+  .subtitle3 {
+    color: $gray-500;
+  }
+
+  h6 {
+    color: #b6b6b6;
+  }
+
+  .support-text-large,
+  .support-text {
+    color: $gray-400;
+  }
+
+  label.caption {
+    color: $gray-700 !important;
+  }
+}
+
+.font-size-15 {
+  font-size: 15px !important;
+}
+.font-size-16 {
+  font-size: 16px !important;
+}
+
+.font-size-34 {
+  font-size: 34px !important;
+}
+
+.font-size-14 {
+  font-size: 14px !important;
+}
+
+.font-size-13 {
+  font-size: 13px !important;
+}
+
+.font-size-11 {
+  font-size: 11px !important;
+}
+
+.font-size-23 {
+  font-size: 23px !important;
+}
+.font-size-24 {
+  font-size: 24px !important;
+}
+
+.font-size-18 {
+  font-size: 18px !important;
+}
+
+.font-size-20 {
+  font-size: 20px !important;
+}
+
+.title-large {
+  font-weight: 600;
+  font-size: 48px;
+  color: #212121;
+}
+
+.title-small {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+}
+
+.body-text-2 {
+  font-size: 20px;
+  line-height: 21px;
+  //color: #616161;
+}
+
+.body-text-1 {
+  color: #212121;
+}
+
+.body-text-3,
+.text-disabled {
+  color: #9e9e9e !important;
+}
+
+.medium-emphasis-text {
+  color: #4a4a4a;
+}
+
+.figma-h2 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.figma-h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.figma-s1 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.figma-s2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.figma-h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.figma-button-large {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.figma-12px-400 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.figma-20px-600 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.figma-b2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.figma-b1 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.figma-c1 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.figma-overline {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}

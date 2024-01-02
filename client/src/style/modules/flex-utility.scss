@@ -1,0 +1,61 @@
+.display-flex {
+    display: flex;
+  }
+  
+  .display-flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-wrap-on {
+    flex-wrap: wrap;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .flex-start-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .flex-start-center {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .flex-end-center {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .flex-center-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-end-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .flex-space-between-center-mobile {
+    @media screen and (max-width: 600px) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+  @for $i from 1 through 10 {
+    .flex-gap-#{$i * 4} {
+      gap: #{$i * 4}px;
+    }
+  }

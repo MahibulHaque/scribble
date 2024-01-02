@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+@import "../vars";
+
+@include mat.core();
+
+
+// Add ".theme-*" class to the body to activate this theme.
+body.theme-ecap {
+
+  // Create an Angular Material theme from the $theme map
+  @include mat.core-theme($theme);
+  @include mat.menu-theme($theme);
+  @include mat.button-theme($theme);
+  @include mat.icon-button-theme($theme);
+  @include mat.toolbar-theme($theme);
+  @include mat.snack-bar-theme($theme);
+  @include mat.divider-theme($theme);
+  @include mat.progress-bar-theme($theme);
+}

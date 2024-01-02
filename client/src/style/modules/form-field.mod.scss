@@ -1,0 +1,26 @@
+.mat-form-field-type-mat-select {
+    .mat-form-field-flex {
+      padding: 0.1em 0.75em 0 1em !important;
+    }
+  }
+  
+  .language-select {
+    .mat-form-field-wrapper {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    .mat-form-field-infix {
+      border-top: 0.2em solid transparent;
+  
+      .mat-select-arrow-wrapper {
+        transform: none !important;
+      }
+    }
+  
+    &.de-selected {
+      .mat-form-field-infix {
+        padding: 0.35em 0 1.15em 0 !important;
+      }
+    }
+  }

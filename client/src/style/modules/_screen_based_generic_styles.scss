@@ -1,0 +1,10 @@
+.hide-gt-xs {
+    @media screen and (min-width: 600px) {
+      display: none !important;
+    }
+  }
+  .hide-xs {
+    @media screen and (max-width: 600px) {
+      display: none !important;
+    }
+  }

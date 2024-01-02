@@ -1,0 +1,97 @@
+.generic-dialog {
+    max-width: 100vw !important;
+  
+    mat-dialog-container {
+      mat-toolbar {
+        .dialog-title-container {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+  
+      .mat-dialog-content {
+        max-height: 80vh;
+      }
+    }
+  }
+  
+  .scrollable-dialog {
+    .content {
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 98vh;
+    }
+  
+    .container,
+    .dialog-content-container {
+      padding: 24px 40px 0;
+    }
+  
+    mat-dialog-container {
+      > * {
+        display: block;
+      }
+    }
+  }
+  
+  .no-padding-dialog {
+    mat-dialog-container {
+      padding: 0 !important;
+    }
+  }
+  
+  .full-screen-dialog {
+    position: fixed;
+    width: 100%;
+    max-width: 100% !important;
+    height: 100%;
+    mat-dialog-container {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      padding: 0 !important;
+      position: absolute;
+      animation: slideIn 400ms ease-out forwards;
+    }
+  }
+  .animate-out {
+    mat-dialog-container {
+      animation: slideOut 400ms ease-in forwards infinite !important;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      left: 140%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      left: 0% !important;
+    }
+    100% {
+      left: 140% !important;
+    }
+  }
+  
+  .modal-footer-buttons-container {
+    padding: 30px 40px;
+  }
+  
+  mat-dialog-container {
+    .close-btn-container {
+      position: relative;
+  
+      .close-btn {
+        position: absolute;
+        right: 8px;
+        top: -20px;
+      }
+    }
+  }
+  
+  // DIALOG END

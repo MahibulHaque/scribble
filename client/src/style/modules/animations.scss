@@ -1,0 +1,139 @@
+@keyframes slideFromLeft {
+    0% {
+      transform: translateX(140%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(-140%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideFromBottom {
+    0% {
+      transform: translateY(140%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 500ms ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .slide-from-left {
+    animation-duration: 400ms;
+    animation-name: slideFromLeft;
+  }
+  
+  .slide-from-right {
+    animation-duration: 400ms;
+    animation-name: slideFromRight;
+  }
+  
+  .slide-from-bottom {
+    overflow-y: hidden;
+    animation-duration: 400ms;
+    animation-name: slideFromBottom;
+  }
+  
+  @keyframes correct {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(-10%) rotate(0deg);
+    }
+    45% {
+      transform: translateY(2%) rotate(0deg);
+    }
+    70% {
+      transform: translateY(-10%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  @keyframes correct-small-screen {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(-5%) rotate(0deg);
+    }
+    45% {
+      transform: translateY(2%) rotate(0deg);
+    }
+    70% {
+      transform: translateY(-5%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  @keyframes wrong {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(0%) rotate(-3deg);
+    }
+    60% {
+      transform: translateY(0%) rotate(3deg);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  @keyframes wrong-small-screen {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(0%) rotate(-2deg);
+    }
+    60% {
+      transform: translateY(0%) rotate(2deg);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(-10%) rotate(0deg);
+    }
+    45% {
+      transform: translateY(2%) rotate(0deg);
+    }
+    70% {
+      transform: translateY(-10%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }

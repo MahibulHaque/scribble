@@ -1,0 +1,58 @@
+@use '@angular/material' as mat;
+@import "../vars";
+
+
+@function getPrimary($key: default) {
+  @return mat.get-theme-color($theme, primary, $key);
+}
+
+@function getAccent($key: default) {
+  @return mat.get-theme-color($theme, accent, $key);
+}
+
+@function getWarn($key: default) {
+  @return mat.get-theme-color($theme, warn, $key);
+}
+
+@mixin white-btn-text {
+    color: white !important;
+    text-shadow: 0 0 2px #3c3c3c;
+}
+
+@mixin material-icon-size($size) {
+  width: $size !important;
+  height: $size !important;
+  min-width: $size !important;
+  min-height: $size !important;
+  font-size: $size !important;
+  line-height: $size !important;
+}
+
+
+@mixin mat-icon-px($size) {
+    .mat-icon-#{$size} {
+        @include material-icon-size(#{$size}px);
+    }
+}
+
+@mixin business-shadow-variant1() {
+    //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12) !important;
+    //border: 0 solid !important;
+}
+
+
+@mixin game-background() {
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
+}
+
+@mixin game-background-light() {
+  background-image: url("../../assets/images/bg-opacity.png");
+  background-size: cover;
+}
+
+@mixin game-long-background() {
+  background-image: url("../../assets/images/long-bg.png");
+  background-size: cover;
+}

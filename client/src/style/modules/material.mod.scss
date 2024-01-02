@@ -1,0 +1,72 @@
+@import "../vars";
+
+.mat-ink-bar {
+  height: 3px !important;
+  background-color: $red-200 !important;
+}
+
+.mat-stroked-button,
+.mat-flat-button {
+  //border-radius: 0 !important;
+}
+
+.mat-stroked-button:not(.mat-primary, .mat-accent, .mat-warn) {
+  color: $gray-500 !important;
+}
+
+.mat-option {
+  font-size: 14px !important;
+}
+
+.mat-option-text {
+  overflow: auto;
+  text-overflow: unset;
+}
+
+.mat-select-value {
+  white-space: normal !important;
+}
+
+.mat-badge-content {
+  background: rgb(196, 179, 80) !important;
+}
+
+a.mat-button-base {
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-select-dropdown {
+  .mat-option {
+    height: max-content !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #eee;
+  }
+  .lang-option {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+  }
+  .lang-option-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    mat-icon {
+      color: #d22832;
+    }
+  }
+}
+
+.floating-button {
+  .mat-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mdc-button {
+  min-width: 48px !important;
+}
