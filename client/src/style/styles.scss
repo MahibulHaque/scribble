@@ -211,3 +211,10 @@ i {
     animation-iteration-count: infinite;
     animation-name: bounce;
   }
+
+  .red-btn{
+	outline: none;
+	border: none;
+	background-color: red;
+	color: white !important;
+  }

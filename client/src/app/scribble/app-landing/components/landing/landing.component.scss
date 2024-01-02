@@ -12,7 +12,7 @@
 		}
 	}
 	.page-subtitle {
-		color: $gray-500;
+		color: gray;
 		font-size: 20px;
 		font-style: normal;
 		font-weight: 500;
@@ -24,6 +24,19 @@
 		}
 	}
 
+	.card-title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 16px;
+		line-height: 150%;
+	}
+
+	.card-subtitle {
+		font-size: 16px;
+		color: gray;
+		font-weight: 500;
+	}
+
 	.landing-page-conatainer {
 		position: relative;
 		height: calc(100vh);
@@ -32,7 +45,19 @@
 		isolation: isolate;
 		@media screen and (max-width: 768px) {
 			height: auto;
-            padding-block: 40px;
+			padding-block: 40px;
 		}
+	}
+
+	.center-container {
+		height: 100vh;
+		padding: 1.25rem;
+		padding-top: 13vh;
+	}
+
+	.card {
+		width: 90vw;
+		max-width: 400px;
+		border-radius: 4px;
 	}
 }
