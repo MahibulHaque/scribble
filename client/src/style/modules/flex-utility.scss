@@ -1,61 +1,256 @@
-.display-flex {
-    display: flex;
-  }
-  
-  .display-flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .flex-wrap-on {
-    flex-wrap: wrap;
-  }
-  
-  .space-between {
-    justify-content: space-between;
-  }
-  .justify-center {
-    justify-content: center;
-  }
-  .align-items-center {
-    align-items: center;
-  }
-  
-  .flex-start-start {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .flex-start-center {
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .flex-end-center {
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .flex-center-center {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex-end-end {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  
-  .flex-space-between-center-mobile {
-    @media screen and (max-width: 600px) {
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  
-  .flex-grow-1 {
-    flex-grow: 1;
-  }
-  
-  @for $i from 1 through 10 {
-    .flex-gap-#{$i * 4} {
-      gap: #{$i * 4}px;
-    }
-  }
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-wrap-on {
+	flex-wrap: wrap;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+.justify-normal {
+	justify-content: normal;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+.justify-evenly {
+	justify-content: space-evenly;
+}
+.justify-stretch {
+	justify-content: stretch;
+}
+.items-start {
+	align-items: flex-start;
+}
+.items-end {
+	align-items: flex-end;
+}
+.items-center {
+	align-items: center;
+}
+.items-baseline {
+	align-items: baseline;
+}
+.items-stretch {
+	align-items: stretch;
+}
+
+.place-items-start {
+	place-items: start;
+}
+.place-items-end {
+	place-items: end;
+}
+.place-items-center {
+	place-items: center;
+}
+.place-items-baseline {
+	place-items: baseline;
+}
+.place-items-stretch {
+	place-items: stretch;
+}
+
+.flex-start-start {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.flex-start-center {
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex-end-center {
+	justify-content: flex-end;
+	align-items: center;
+}
+.flex-center-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-end-end {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.flex-space-between-center-mobile {
+	@media screen and (max-width: 600px) {
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-col-reverse {
+	flex-direction: column-reverse;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.flex-nowrap {
+	flex-wrap: nowrap;
+}
+
+.flex-1 {
+	flex: 1 1 0%;
+}
+
+.flex-auto {
+	flex: 1 1 auto;
+}
+
+.flex-initial {
+	flex: 0 1 auto;
+}
+
+.flex-none {
+	flex: none;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+.grow-0 {
+	flex-grow: 0;
+}
+
+.shrink {
+	flex-shrink: 1;
+}
+
+.shrink-0 {
+	flex-shrink: 0;
+}
+
+@for $i from 1 through 12 {
+	.grid-cols-#{$i} {
+		grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+	}
+
+	.grid-rows-#{$i} {
+		grid-template-rows: repeat(#{$i}, minmax(0, 1fr));
+	}
+}
+.grid-cols-none {
+	grid-template-columns: none;
+}
+.grid-cols-subgrid {
+	grid-template-columns: subgrid;
+}
+
+.grid-rows-none {
+	grid-template-rows: none;
+}
+
+.grid-rows-subgrid {
+	grid-template-rows: subgrid;
+}
+
+.col-auto {
+	grid-column: auto;
+}
+.col-start-auto {
+	grid-column-start: auto;
+}
+.col-end-auto {
+	grid-column-end: auto;
+}
+
+.row-auto {
+	grid-row: auto;
+}
+
+.row-start-auto {
+	grid-row-start: auto;
+}
+.row-end-auto {
+	grid-row-end: auto;
+}
+
+@for $i from 1 through 12 {
+	.col-span-#{$i} {
+		grid-column: span #{$i}/ span#{$i};
+	}
+	.col-start-#{i} {
+		grid-column-start: #{$i};
+	}
+	.col-end-#{$i} {
+		grid-column-end: #{$i};
+	}
+	.row-span-#{$i} {
+		grid-row: span #{$i}/ span#{$i};
+	}
+	.row-start-#{i} {
+		grid-row-start: #{$i};
+	}
+	.row-end-#{$i} {
+		grid-row-end: #{$i};
+	}
+}
+
+@for $i from 1 through 12 {
+	.order-#{$i} {
+		order: #{$i};
+	}
+}
+
+@for $i from 1 through 10 {
+	.flex-gap-#{$i * 4} {
+		gap: #{$i * 4}px;
+	}
+}
+
+@for $i from 0 through 40 {
+	.space-y-#{$i} {
+		margin-top: #{$i * 0.25}rem;
+	}
+
+	.space-x-#{$i} {
+		margin-left: #{$i * 0.25} rem;
+	}
+
+	basis-#{$i} {
+		flex-basis: #{$i * 0.25}rem;
+	}
+}
