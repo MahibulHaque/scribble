@@ -1,22 +1,22 @@
-<form [formGroup]="createRoomForm" (ngSubmit)="onSubmit()">
-    <div class="flex flex-col gap-4">
-      <div class="form-field">
-        <label class="text-foreground">Username</label>
-        <div class="form-control">
-          <input type="text" placeholder="johndoe" formControlName="username" />
-        </div>
-        <div class="form-message text-xs"></div>
-      </div>
-  
-      <div>
-        <p class="mb-2 text-sm font-medium">Room ID</p>
-  
-        <div class="flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm text-muted-foreground">
-          <span>{{ roomId }}</span>
-          <!-- Add your CopyButton component or functionality here -->
-          <!-- Example: <button (click)="copyToClipboard()">Copy</button> -->
-        </div>
-      </div>
-      <button mat-flat-button color="primary">Create Room</button>
+<form [formGroup]="createRoomForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+  <mat-label class="mb-4">Username</mat-label>
+  <mat-form-field appearance="outline" class="mb-12 flex flex-col flex-gap-6">
+    <input matInput placeholder="John Doe" [formControl]="createRoomForm.controls.username" />
+    <mat-error *hasError="'required'">Username is required</mat-error>
+  </mat-form-field>
+
+  <div>
+    <mat-label class="mb-4">Room ID</mat-label>
+
+    <div class="flex items-center justify-between copy-button-container mb-8">
+      <span>{{ roomId }}</span>
+      <app-copy-button [value]="roomId"></app-copy-button>
     </div>
-  </form>
+  </div>
+  <button type="submit" mat-flat-button color="primary" [disabled]="isLoading">
+    <div class="flex items-center gap-8">
+      <mat-spinner [diameter]="20" class="mr-12" *ngIf="isLoading"></mat-spinner>
+      <span>Create Room</span>
+    </div>
+  </button>
+</form>

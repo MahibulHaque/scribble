@@ -212,9 +212,6 @@ i {
     animation-name: bounce;
   }
 
-  .red-btn{
-	outline: none;
-	border: none;
-	background-color: red;
-	color: white !important;
-  }
+.mat-mdc-form-field-error-wrapper{
+	padding-inline: 0px !important;
+}

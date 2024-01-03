@@ -8,8 +8,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateRoomFormComponent } from './components/create-room-form/create-room-form.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CopyButtonComponent } from './components/copy-button/copy-button.component';
+import { SharedDirectiveModule } from '../../shared-directive/shared-directive.module';
 @NgModule({
-	declarations: [LandingComponent, CreateRoomFormComponent],
+	declarations: [LandingComponent, CreateRoomFormComponent, CopyButtonComponent],
 	imports: [
 		CommonModule,
 		RouterModule.forChild([
@@ -22,7 +27,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 		ReactiveFormsModule,
 		MatCardModule,
 		MatButtonModule,
-		MatProgressSpinnerModule
+		MatProgressSpinnerModule,
+		MatIconModule,
+		MatFormFieldModule,
+		MatInputModule,
+		SharedDirectiveModule
 	]
 })
 export class AppLandingModule {}

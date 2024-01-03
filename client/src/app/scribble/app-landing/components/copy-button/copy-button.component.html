@@ -1,0 +1,8 @@
+<button type="button" class="copy-button" [class.copied]="hasCopied" (click)="copyToClipboard()">
+    <ng-container *ngIf="hasCopied; else copyIcon">
+        <mat-icon class="icon">check</mat-icon>
+    </ng-container>
+    <ng-template #copyIcon>
+        <mat-icon class="icon">content_copy</mat-icon>
+    </ng-template>
+</button>

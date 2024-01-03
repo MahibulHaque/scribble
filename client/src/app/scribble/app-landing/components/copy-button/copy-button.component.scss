@@ -1,0 +1,32 @@
+// copy-button.component.scss
+
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0; // Add your hover background color
+  }
+
+  &.copied {
+    background-color: #e0e0e0; // Add your copied background color
+  }
+
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.mat-icon{
+  margin:0 !important;
+}
