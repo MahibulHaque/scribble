@@ -13,11 +13,21 @@ import { addUndoPoint, getLastUndoPoint, deleteLastUndoPoint } from './data/undo
 
 const app = express()
 
-app.use(cors())
+app.use(
+  cors({
+    origin: 'http://localhost:4200',
+    methods: ['GET', 'POST'],
+  })
+)
 
 const server = http.createServer(app)
 
-const io = new Server(server)
+const io = new Server(server, {
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST'],
+  },
+})
 
 function isRoomCreated(roomId: string) {
   const rooms = [...io.sockets.adapter.rooms]
@@ -128,24 +138,18 @@ io.on('connection', socket => {
     socket.to(roomId).emit('clear-canvas')
   })
 
-  socket.on(
-    'undo',
-    ({ canvasState, roomId }: { canvasState: string; roomId: string }) => {
-      socket.to(roomId).emit('undo-canvas', canvasState)
-    }
-  )
+  socket.on('undo', ({ canvasState, roomId }: { canvasState: string; roomId: string }) => {
+    socket.to(roomId).emit('undo-canvas', canvasState)
+  })
 
   socket.on('get-last-undo-point', (roomId: string) => {
     const lastUndoPoint = getLastUndoPoint(roomId)
     socket.emit('last-undo-point-from-server', lastUndoPoint)
   })
 
-  socket.on(
-    'add-undo-point',
-    ({ roomId, undoPoint }: { roomId: string; undoPoint: string }) => {
-      addUndoPoint(roomId, undoPoint)
-    }
-  )
+  socket.on('add-undo-point', ({ roomId, undoPoint }: { roomId: string; undoPoint: string }) => {
+    addUndoPoint(roomId, undoPoint)
+  })
 
   socket.on('delete-last-undo-point', (roomId: string) => {
     deleteLastUndoPoint(roomId)

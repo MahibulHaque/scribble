@@ -13,7 +13,7 @@
       <app-copy-button [value]="roomId"></app-copy-button>
     </div>
   </div>
-  <button type="submit" mat-flat-button color="primary" [disabled]="isLoading">
+  <button type="submit" mat-flat-button color="primary" [disabled]="!createRoomForm.valid || isLoading">
     <div class="flex items-center gap-8">
       <mat-spinner [diameter]="20" class="mr-12" *ngIf="isLoading"></mat-spinner>
       <span>Create Room</span>
