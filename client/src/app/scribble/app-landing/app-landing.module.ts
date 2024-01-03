@@ -16,6 +16,7 @@ import { CreateRoomFormComponent } from './components/create-room-form/create-ro
 import { LandingComponent } from './components/landing/landing.component';
 import { StoreModule } from '@ngrx/store';
 import { userReducer } from '../../store/user/user.selector';
+import { GenericToastService } from '../../shared-services/generic-toast.service';
 
 @NgModule({
 	declarations: [LandingComponent, CreateRoomFormComponent, CopyButtonComponent],
@@ -36,7 +37,9 @@ import { userReducer } from '../../store/user/user.selector';
 		MatFormFieldModule,
 		MatInputModule,
 		SharedDirectiveModule,
-		StoreModule.forFeature('user', userReducer)
-	]
+	],
+    providers:[
+        GenericToastService
+    ]
 })
 export class AppLandingModule {}
