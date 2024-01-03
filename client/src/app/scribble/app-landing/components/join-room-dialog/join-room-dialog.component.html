@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Join a room now!</h2>
+<mat-dialog-content>
+    <form [formGroup]="joinRoomForm" (ngSubmit)="onSubmit()">
+        <mat-label>Username</mat-label>
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="username" placeholder="Username" />
+            <mat-error *hasError="'required'">Username is required</mat-error>
+            <mat-error *hasError="'minlength'">Username is must be atleast 5 characters</mat-error>
+        </mat-form-field>
+        <mat-label>Room ID</mat-label>
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="roomId" placeholder="Room ID" />
+            <mat-error *hasError="'required'">Room id is required</mat-error>
+            <mat-error *hasError="'minlength'|| 'maxlength'">Room id must be 21 characters</mat-error>
+            <mat-error *hasError="noSpaceAllowed">Room id cannot have white spaces</mat-error>
+        </mat-form-field>
+        <button mat-stroked-button color="primary" type="submit" [disabled]="!joinRoomForm.valid || isLoading">
+            <div class="flex items-center gap-8">
+                <mat-spinner [diameter]="20" class="mr-12" *ngIf="isLoading"></mat-spinner>
+                <span>Create Room</span>
+            </div>
+        </button>
+    </form>
+</mat-dialog-content>

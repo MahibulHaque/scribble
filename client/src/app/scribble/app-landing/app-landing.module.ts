@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 
 import { RouterLinkDirective } from '../../shared-directive/router-link.directive.ts.directive';
@@ -36,6 +37,7 @@ import { GenericToastService } from '../../shared-services/generic-toast.service
 		MatIconModule,
 		MatFormFieldModule,
 		MatInputModule,
+		MatDialogModule,
 		SharedDirectiveModule,
 	],
     providers:[
