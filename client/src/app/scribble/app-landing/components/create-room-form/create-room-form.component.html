@@ -3,6 +3,7 @@
   <mat-form-field appearance="outline" class="mb-12 flex flex-col flex-gap-6">
     <input matInput placeholder="John Doe" [formControl]="createRoomForm.controls.username" />
     <mat-error *hasError="'required'">Username is required</mat-error>
+    <mat-error *hasError="'minlength'">Username must be atleast 5 characters</mat-error>
   </mat-form-field>
 
   <div>

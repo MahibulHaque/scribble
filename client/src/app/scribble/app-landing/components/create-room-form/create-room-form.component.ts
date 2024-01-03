@@ -20,11 +20,11 @@ export class CreateRoomFormComponent {
 	ngOnInit(): void {}
 
 	createRoomForm = this.fb.nonNullable.group({
-		username: ['', Validators.required]
+		username: ['', [Validators.required, Validators.minLength(5)]]
 	});
 
 	onSubmit(): void {
 		this.isLoading = true;
-        this.socket.emit('create-room', [this.roomId, this.createRoomForm.value.username])
+		this.socket.emit('create-room', [this.roomId, this.createRoomForm.value.username]);
 	}
 }
