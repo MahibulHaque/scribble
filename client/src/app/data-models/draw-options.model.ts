@@ -1,10 +1,10 @@
 export interface Point {
-	x: number;
-	y: number;
+    x: number;
+    y: number;
 }
 
 export interface DrawProps {
-	ctx: CanvasRenderingContext2D;
-	currentPoint: Point;
-	prevPoint: Point | undefined;
+    ctx: CanvasRenderingContext2D;
+    currentPoint: Point;
+    prevPoint: Point | undefined;
 }

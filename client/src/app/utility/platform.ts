@@ -2,7 +2,6 @@
 
 // declare var process: any;
 
-const BROWSER_PLATFORM: boolean = typeof window !== 'undefined' && typeof window.document !== 'undefined';
+const BROWSER_PLATFORM: boolean = typeof window !== "undefined" && typeof window.document !== "undefined";
 
-
-export {BROWSER_PLATFORM};
+export { BROWSER_PLATFORM };

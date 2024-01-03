@@ -1,25 +1,25 @@
-import { ChangeDetectorRef, Component, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, Input } from "@angular/core";
 
 @Component({
-	selector: 'app-copy-button',
-	templateUrl: './copy-button.component.html',
-	styleUrl: './copy-button.component.scss'
+    selector: "app-copy-button",
+    templateUrl: "./copy-button.component.html",
+    styleUrl: "./copy-button.component.scss"
 })
 export class CopyButtonComponent {
-	@Input({ required: true }) value: string = '';
-	hasCopied: boolean = false;
+    @Input({ required: true }) value: string = "";
+    hasCopied: boolean = false;
 
-	constructor(private cdr: ChangeDetectorRef) {}
-	
-	ngOnInit(): void {}
+    constructor(private cdr: ChangeDetectorRef) {}
 
-	copyToClipboard(): void {
-		navigator.clipboard.writeText(this.value);
-		this.hasCopied = true;
+    ngOnInit(): void {}
 
-		setTimeout(() => {
-			this.hasCopied = false;
-			this.cdr.detectChanges();
-		}, 2000);
-	}
+    copyToClipboard(): void {
+        navigator.clipboard.writeText(this.value);
+        this.hasCopied = true;
+
+        setTimeout(() => {
+            this.hasCopied = false;
+            this.cdr.detectChanges();
+        }, 2000);
+    }
 }

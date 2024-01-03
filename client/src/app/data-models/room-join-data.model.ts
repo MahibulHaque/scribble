@@ -1,6 +1,6 @@
 import { User } from "./user.interface";
 
-export interface RoomJoinedData{
+export interface RoomJoinedData {
     user: User,
     roomId:string,
     members:User[]
