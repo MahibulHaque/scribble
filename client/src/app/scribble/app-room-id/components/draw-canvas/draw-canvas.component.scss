@@ -1,0 +1,28 @@
+.canvas-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.canvas-button-container {
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	display: flex;
+	user-select: none;
+	border-bottom-left-radius: 0.25rem;
+	border-top-right-radius: 2.5px;
+}
+
+.skeleton {
+	position: absolute;
+	height: calc(100% - 50px);
+	width: calc(100% - 50px);
+}
+
+::ng-deep .skeleton-loader {
+	margin: 0px !important;
+}

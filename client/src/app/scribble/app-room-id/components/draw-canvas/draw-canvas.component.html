@@ -1,0 +1,9 @@
+<div class="canvas-container">
+    @if(isCanvasLoading){
+    <ngx-skeleton-loader [theme]="{height: 'calc(100% - 50px)',
+        width: 'calc(100% - 50px)', position:'absolute', bottom:0, left:0}"></ngx-skeleton-loader>
+    }
+    @else{
+    <div class="canvas-button-container"></div>
+    }
+</div>
