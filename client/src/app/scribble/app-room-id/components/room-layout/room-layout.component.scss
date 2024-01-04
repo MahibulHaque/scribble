@@ -1,0 +1,8 @@
+.room-layout-container {
+	height: calc(100vh - 3.8rem);
+
+    @media (min-width: 1024px){
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(15.5rem, 1fr);
+    }
+}
