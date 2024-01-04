@@ -1,0 +1,19 @@
+.sidebar-wrapper {
+	display: hidden;
+	border: 1px solid gray;
+	padding-inline: 1.5rem;
+	padding-block: 2rem;
+
+	@media screen and (min-width: 1024px) {
+		display: block;
+	}
+}
+
+.sidebar-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	position: relative;
+	height: 100%;
+	width: 12.5rem;
+}
