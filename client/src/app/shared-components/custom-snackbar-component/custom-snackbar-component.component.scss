@@ -1,22 +1,21 @@
 :host {
-    display: block;
-  
-    .custom-snackbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: black;
-      height: 56px;
-    }
-    .custom-snackbar:not(.error-toast) {
-      color: white;
-    }
-    .error-toast {
-      color: #ff2525;
-      font-weight: 700;
-    }
-  
-    .error-text{
-      font-weight: 700 !important;
-    }
-  }
+	display: block;
+	.custom-snackbar {
+    display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 48px;
+    border-radius: 1rem;
+	}
+	.custom-snackbar:not(.error-toast) {
+		color: white;
+	}
+	.error-toast {
+		color: #ff2525;
+		font-weight: 700;
+	}
+
+	.error-text {
+		font-weight: 700 !important;
+	}
+}

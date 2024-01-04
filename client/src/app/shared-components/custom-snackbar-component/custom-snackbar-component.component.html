@@ -1,6 +1,6 @@
-<div class="custom-snackbar py-16 pl-16 pr-8" [class.error-toast]="data.error">
-    <div class="figma-s2" [class.error-text]="data.error">{{ data.message }}</div>
-    <button mat-icon-button (click)="close()">
+<div class="custom-snackbar pl-8 pr-8" [class.error-toast]="data.error">
+    <div class="text-sm" [class.error-text]="data.error">{{ data.message }}</div>
+    <button mat-icon-button color="warn" (click)="close()">
         <mat-icon>{{ data.iconName }}</mat-icon>
     </button>
 </div>

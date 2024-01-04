@@ -1,4 +1,4 @@
-<form [formGroup]="createRoomForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+<form [formGroup]="createRoomForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 mb-16">
   <mat-label class="mb-4">Username</mat-label>
   <mat-form-field appearance="outline" class="mb-12 flex flex-col flex-gap-6">
     <input matInput placeholder="John Doe" [formControl]="createRoomForm.controls.username" />

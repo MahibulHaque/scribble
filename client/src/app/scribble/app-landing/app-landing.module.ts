@@ -18,9 +18,19 @@ import { LandingComponent } from './components/landing/landing.component';
 import { StoreModule } from '@ngrx/store';
 import { userReducer } from '../../store/user/user.selector';
 import { GenericToastService } from '../../shared-services/generic-toast.service';
+import {
+	JoinRoomButtonComponent,
+	JoinRoomDialogComponent
+} from './components/join-room-dialog/join-room-dialog.component';
 
 @NgModule({
-	declarations: [LandingComponent, CreateRoomFormComponent, CopyButtonComponent],
+	declarations: [
+		LandingComponent,
+		CreateRoomFormComponent,
+		CopyButtonComponent,
+		JoinRoomButtonComponent,
+		JoinRoomDialogComponent
+	],
 	imports: [
 		CommonModule,
 		RouterModule.forChild([
@@ -38,10 +48,8 @@ import { GenericToastService } from '../../shared-services/generic-toast.service
 		MatFormFieldModule,
 		MatInputModule,
 		MatDialogModule,
-		SharedDirectiveModule,
+		SharedDirectiveModule
 	],
-    providers:[
-        GenericToastService
-    ]
+	providers: [GenericToastService]
 })
 export class AppLandingModule {}

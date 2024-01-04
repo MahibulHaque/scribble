@@ -11,8 +11,9 @@ import { Socket } from 'ngx-socket-io';
 
 @Component({
 	selector: 'app-join-room-dialog',
-	templateUrl: './join-room-dialog.component.ts',
-	styleUrl: './join-room-dialog.component.scss'
+	templateUrl: './join-room-dialog.component.html',
+	styleUrl: './join-room-dialog.component.scss',
+	changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class JoinRoomDialogComponent {
 	isLoading = false;
@@ -53,16 +54,23 @@ export class JoinRoomDialogComponent {
 			});
 			setTimeout(() => {
 				this.isLoading = false;
-				this.dialogRef.close();
 				this.cdr.detectChanges();
-			}, 2000);
+			}, 1000);
 		}
+	}
+
+	getFormControl(controlName: string): AbstractControl | null {
+		return this.joinRoomForm.get(controlName);
 	}
 }
 
 @Component({
 	selector: 'app-join-room-button',
-	template: ` <button mat-raised-button (click)="openDialog()">Join a Room</button> `
+	template: `
+		<button class="w-full" mat-stroked-button color="primary" (click)="openDialog()">
+			Join a Room
+		</button>
+	`
 })
 export class JoinRoomButtonComponent {
 	constructor(private dialog: MatDialog) {}
